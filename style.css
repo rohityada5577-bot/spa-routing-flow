@@ -1,0 +1,302 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff !important;
+}
+body.dark header{
+     background-color: #555555; /* Gray header for dark mode */
+    color: #ffffff; /* White text */
+}
+body.dark #theme-toggle {
+    color: #ffffff;
+}
+header, body, #theme-toggle {
+    transition: background-color 0.3s, color 0.3s;
+}
+button, input, select, .card {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* In dark mode, change the button's background and text color */
+body.dark button {
+    background-color: #444444; /* Dark button */
+    color: #ffffff;
+}
+body.dark button:hover {
+    background-color: #333333;
+}
+
+/* Header Styling */
+.header {
+  background-color: #1877f2;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Card Grid Layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 280px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 50%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #000;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  margin-top: 15px;
+}
+
+.pagination button {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:hover:not(.active) {
+  background-color: #e1e1e1;
+}
+
+.pagination .active {
+  background-color: #1877f2;
+  color: white;
+  border-color: #1877f2;
+}
+
+/* Accordion */
+.accordion-content {
+  display: none;
+  background: #f2f2f2;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.accordion-header {
+  background-color: #1877f2;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.accordion-header:hover {
+  background-color: #0e6ed6;
+}
+
+body.dark .card {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark .card p {
+  color: #ccc;
+}
+
+.header-h1-tag{
+    font-size: 16px;
+    padding: 10px 10px 10px 10px !important;
+}
+
+/* =========================
+   REGISTER FORM STYLES
+========================= */
+
+.register-container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  background: linear-gradient(135deg, #1877f2, #5b8cff);
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+  animation: fadeIn 0.6s ease;
+}
+
+/* Title */
+.register-title {
+  text-align: center;
+  color: white;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Inputs */
+.form-input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.form-input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* Error text */
+.error {
+  font-size: 12px;
+  color: #ffe1e1;
+  min-height: 14px;
+}
+
+/* Button */
+.register-btn {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+
+  background: linear-gradient(
+    270deg,
+    #ff9800,
+    #ff4081,
+    #ff9800
+  );
+  background-size: 600% 600%;
+  animation: gradientMove 4s ease infinite;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.register-btn:active {
+  transform: scale(0.97);
+}
+
+/* Animations */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .register-container {
+    margin: 20px;
+    padding: 22px;
+  }
+}
+.search-box{
+    margin-top: 20px;
+    margin-left: 11px;
+    padding: 10px;
+}
+
+
+
